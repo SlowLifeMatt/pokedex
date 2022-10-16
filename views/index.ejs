@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+                    body {
+            color: rgb(43, 125, 132);
+            background-color: rgb(244, 168, 15);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display:flex;
+            justify-content: left;
+            text-align: top;
+            
+
+
+        }
+            img {
+                height: 100px;
+                width: auto;
+                border: 1px solid;
+
+            }
+            li {
+                display: inline-block;
+            }
+            .flex-container {
+                flex-wrap: wrap;
+                border: rgb(0, 0, 0) solid 20px;
+                box-sizing: border-box;
+                background: #f9f9f9;
+                border-radius: 1em;
+                text-align: center;
+                box-shadow: 1px 1px 5px #888;
+                display: flex;
+                justify-content: space-between;
+            }
+
+
+
+
+    </style>
+<head>
+    <%-include('./partials/head.ejs') %>
+</head>
+
+<body>
+
+            <div class="flex-container">
+                <div> 
+                   
+                    <div class="pokemon">
+                        <ul >
+                            <h1>Pokédex</h1>
+                            <% for(let i =0; i < (data).length; i++){ %>
+                          
+                            <li>
+
+                                    <a href="/<%=i %>"> <img src=<%= data[i].img %>></a>
+
+                            
+                            </li>
+                          
+                       
+                            <% } %>
+                            </ul>
+
+                    </div>
+
+                </div>
+            </div>
+                
+
+</body>
+</html>

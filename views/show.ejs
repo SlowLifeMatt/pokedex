@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('./partials/head.ejs') %>
+</head>
+<body>
+        <style>
+        body {
+            color: rgb(43, 125, 132);
+            background-color: rgb(244, 168, 15);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display:flex;
+            justify-content: left;
+            text-align: center;
+            flex-direction: row;
+
+        }
+        h2 {
+            color: blueviolet;
+        }
+        a {
+            color: rgb(58, 58, 58);
+        }
+        img {
+            height: 100px;
+            width: auto;
+            border:rgb(43, 125, 132) solid 5px;
+        }
+    </style>
+    <div class ="flex-container">
+    
+        <div><%= data?.name %></div>
+      <div><img src=<%= data?.img %>></div> 
+       <div>HP: <%= data?.stats.hp %></div>
+
+
+    </div>
+
+
+</body>
+</html>
