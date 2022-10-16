@@ -7,31 +7,70 @@
         <style>
         body {
             color: rgb(43, 125, 132);
-            background-color: rgb(244, 168, 15);
+            background-image: url("https://cdn.discordapp.com/attachments/472762389121466368/1031300337946087434/pokedex_background.png");
+            background-size: 600px;
+            background-repeat: no-repeat;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            display:flex;
-            justify-content: left;
-            text-align: center;
-            flex-direction: row;
+            display: flex;
 
         }
         h2 {
             color: blueviolet;
+            
+            text-align: center;
         }
-        a {
-            color: rgb(58, 58, 58);
-        }
+
         img {
-            height: 100px;
-            width: auto;
+            height: 200px;
+            width: 200px;
             border:rgb(43, 125, 132) solid 5px;
+            position: relative;
+            left: 50px;
+            
         }
+        .btn {
+            justify-content: left;
+            margin-left: 350px;
+            padding-bottom: 80px;
+            margin-top: 100px;
+        }
+        .data {
+            display: flex;
+            margin-left: 280px;
+            font-size: 20px;
+            margin-top: -180px;
+        }
+
     </style>
     <div class ="flex-container">
+    <div class ='btn'>
+        <button><a href="/">Back to Pokédex</a></button>
     
-        <div><%= data?.name %></div>
+    </div>
+        <div>
+            <h2><%= data?.name %></h2>
+            
+        </div>
       <div><img src=<%= data?.img %>></div> 
-       <div>HP: <%= data?.stats.hp %></div>
+       <div class="data">
+        
+        
+
+            <div>
+                <div class="one">Type: <%= data?.type%></div>
+                <div class="two">hp:        <%= data?.stats.hp %></div>
+                <div class="three">attack:    <%= data?.stats.attack %></div>
+                <div class="four">defence:   <%= data?.stats.defense %></div>
+                <div class="five">spattack:  <%= data?.stats.spattack %></div>
+                <div class="six">spdefense: <%= data?.stats.spdefense %></div>
+                <div class="seven">speed:     <%= data?.stats.speed %></div>
+            </div>
+    
+
+       
+        
+    
+        </div>
 
 
     </div>
