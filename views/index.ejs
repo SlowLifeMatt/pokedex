@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <style>
-                    body {
-            color: rgb(43, 125, 132);
-            background-color: rgb(244, 168, 15);
+        body {
+            color: rgb(255, 255, 255);
+            background-image: url("https://cdn.discordapp.com/attachments/472762389121466368/1031330502008905829/illustration-simple-background-anime-minimalism-red-grass-796391-wallhere.com.jpg");
+            background-size: 2000px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            display:flex;
-            justify-content: left;
-            text-align: top;
-            
-
-
+            display: flex;
         }
-            img {
-                height: 100px;
-                width: auto;
-                border: 1px solid;
 
-            }
-            li {
-                display: inline-block;
-            }
-            .flex-container {
-                flex-wrap: wrap;
-                border: rgb(0, 0, 0) solid 20px;
-                box-sizing: border-box;
-                background: #f9f9f9;
-                border-radius: 1em;
-                text-align: center;
-                box-shadow: 1px 1px 5px #888;
-                display: flex;
-                justify-content: space-between;
-            }
-
-
-
+        img {
+             height: 100px;
+             width: 100px;
+              border: 1px solid;
+             border-radius: 1em;
+             
+        }
+        li {
+            display: inline-block;
+        }
+        .flex-container {
+            box-sizing: border-box;
+            border-radius: 1em;
+            align-content: center;
+        }
+        h1 {
+            text-align: center;
+        }
 
     </style>
 <head>
@@ -42,31 +37,18 @@
 </head>
 
 <body>
-
-            <div class="flex-container">
-                <div> 
-                   
-                    <div class="pokemon">
-                        <ul >
-                            <h1>Pokédex</h1>
+    
+        <div class="flex-container">
+                 <div class="nav-bar">
+                     <ul >
+                         <h1>Pokédex</h1>
                             <% for(let i =0; i < (data).length; i++){ %>
-                          
                             <li>
-
                                     <a href="/<%=i %>"> <img src=<%= data[i].img %>></a>
-
-                            
                             </li>
-                          
-                       
                             <% } %>
                             </ul>
-
                     </div>
-
                 </div>
-            </div>
-                
-
 </body>
 </html>

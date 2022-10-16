@@ -16,8 +16,8 @@
         }
         h2 {
             color: blueviolet;
-            
             text-align: center;
+            margin-top: 100px;
         }
 
         img {
@@ -26,38 +26,29 @@
             border:rgb(43, 125, 132) solid 5px;
             position: relative;
             left: 50px;
+            top: 340px;
             
         }
-        .btn {
-            justify-content: left;
-            margin-left: 350px;
-            padding-bottom: 80px;
-            margin-top: 100px;
-        }
+
         .data {
             display: flex;
             margin-left: 280px;
             font-size: 20px;
-            margin-top: -180px;
+        }
+        .btn {
+            display: inline-flex;
+            margin-top: 100px;
+            margin-left: 80px;
         }
 
     </style>
     <div class ="flex-container">
-    <div class ='btn'>
-        <button><a href="/">Back to Pokédex</a></button>
-    
-    </div>
-        <div>
-            <h2><%= data?.name %></h2>
-            
-        </div>
+
       <div><img src=<%= data?.img %>></div> 
        <div class="data">
-        
-        
-
             <div>
-                <div class="one">Type: <%= data?.type%></div>
+                <h2><%= data?.name %></h2>
+                <div class="one">type: <%= data?.type%></div>
                 <div class="two">hp:        <%= data?.stats.hp %></div>
                 <div class="three">attack:    <%= data?.stats.attack %></div>
                 <div class="four">defence:   <%= data?.stats.defense %></div>
@@ -65,16 +56,9 @@
                 <div class="six">spdefense: <%= data?.stats.spdefense %></div>
                 <div class="seven">speed:     <%= data?.stats.speed %></div>
             </div>
-    
-
-       
-        
-    
         </div>
-
-
+        <button class = 'btn'><a href="/">Back to Pokédex</a></button>
+        <button class = 'btn'><a href="/new">Create new Pokemon</a></button>
     </div>
-
-
 </body>
 </html>
