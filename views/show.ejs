@@ -44,17 +44,17 @@
     </style>
     <div class ="flex-container">
 
-      <div><img src=<%= data?.img %>></div> 
+      <div><img src=<%= allPokemon.img %>></div> 
        <div class="data">
             <div>
-                <h2><%= data?.name %></h2>
-                <div class="one">type: <%= data?.type%></div>
-                <div class="two">hp:        <%= data?.stats.hp %></div>
-                <div class="three">attack:    <%= data?.stats.attack %></div>
-                <div class="four">defence:   <%= data?.stats.defense %></div>
-                <div class="five">spattack:  <%= data?.stats.spattack %></div>
-                <div class="six">spdefense: <%= data?.stats.spdefense %></div>
-                <div class="seven">speed:     <%= data?.stats.speed %></div>
+                <h2>            <%= allPokemon.name %></h2>
+                <div>type:      <%= allPokemon.type%></div>
+                <div>hp:        <%= allPokemon.stats.hp %></div>
+                <div>attack:    <%= allPokemon.stats.attack %></div>
+                <div>defence:   <%= allPokemon.stats.defense %></div>
+                <div>spattack:  <%= allPokemon.stats.spattack %></div>
+                <div>spdefense: <%= allPokemon.stats.spdefense %></div>
+                <div>speed:     <%= allPokemon.stats.speed %></div>
 
             </div>
         </div>
