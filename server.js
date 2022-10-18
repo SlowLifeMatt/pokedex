@@ -28,8 +28,8 @@ app.get('/pokemon/:id', (req, res) => {
 });
 
 // create
- //post route
- app.post('/pokemon', (req,res) => {
+ 
+app.post('/pokemon', (req,res) => {
     console.log(req.body)
     
     let stats = {
@@ -43,7 +43,7 @@ app.get('/pokemon/:id', (req, res) => {
     let newPokemon = {
         name: req.body.name,
         img: req.body.img,
-        type: req.body.types,
+        type: req.body.type,
         stats: stats,
 
     }
@@ -68,12 +68,27 @@ app.get('/pokemon/:id/edit', (req, res) => {
       }
     );
   });
+
  // update
  app.put('/pokemon/:id', (req,res) => {
-    pokemon[req.params.id] = req.body
+    let stats = {
+        hp: req.body.hp,
+        attack: req.body.attack,
+        defense: req.body.defense,
+        spattack: req.body.spattack,
+        spdefense: req.body.spdefense,
+        speed: req.body.speed
+    }
+    let editPokemon = {
+        name: req.body.name,
+        img: req.body.img,
+        type: req.body.type,
+        stats: stats,
+
+    }
+    pokemon[req.params.id] = editPokemon
     res.redirect('/pokemon')
  }) 
-
 
 // listener
 app.listen(port, () => {
