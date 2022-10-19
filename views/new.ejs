@@ -4,19 +4,42 @@
     <%-include('./partials/head.ejs') %>
   </head>
   <body>
-    <h1>New Pokemon!</h1>
+    <style>
+        body {
+            background-image: url("https://cdn.discordapp.com/attachments/472762389121466368/1031330502008905829/illustration-simple-background-anime-minimalism-red-grass-796391-wallhere.com.jpg");
+            background-size: 1700px;
+            background-repeat: no-repeat;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            
+        }
+        
+        h1 {
+            color:aqua;
+        }
+        h2 {
+            color:rgb(255, 148, 9);
+        }
+        input {
+            display:inline-block;
+        
+        }
+        
+            </style>
+    <h1>Create a New Pokémon!</h1>
         <form action="/pokemon/" method="POST">
-            <input type="text" name="name"      placeholder="name"/>
-            <input type="text" name="img"       placeholder="image url link"/>
-            <input type="text" name="type"      placeholder="type"/>
-            <input type="text" name="hp"        placeholder="hp"/>
-            <input type="text" name="attack"    placeholder="attack"/>
-            <input type="text" name="defense"   placeholder="defense"/>
-            <input type="text" name="spattack"  placeholder="spattack"/>
-            <input type="text" name="spdefense" placeholder="spdefense"/>
-            <input type="text" name="speed"     placeholder="speed"/>
+            <h2>Name:</h2>      <input type="text" name="name"      placeholder="name"/>
+            <h2>Image URL:</h2> <input type="text" name="img"       placeholder="image url link"/>
+            <h2>Type:</h2>      <input type="text" name="type"      placeholder="type"/>
+            <h2>HP:</h2>        <input type="text" name="hp"        placeholder="hp"/>
+            <h2>Attack:</h2>    <input type="text" name="attack"    placeholder="attack"/>
+            <h2>Defense:</h2>   <input type="text" name="defense"   placeholder="defense"/>
+            <h2>SPAttack:</h2>  <input type="text" name="spattack"  placeholder="spattack"/>
+            <h2>SPDefense:</h2> <input type="text" name="spdefense" placeholder="spdefense"/>
+            <h2>Speed:</h2>     <input type="text" name="speed"     placeholder="speed"/>
 
-            <input type="submit" name="" value="new Pokemon"/>
+            <h2>Submit your New Pokémon!</h2><input type="submit" name="" value="new Pokemon"/>
+            <button class = 'btn'><a href="/pokemon">Back to Pokédex</a></button>
         </form>
 
   </body>

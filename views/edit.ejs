@@ -4,18 +4,41 @@
     <%-include('./partials/head.ejs') %>
   </head>
   <body>
+    <style>
+body {
+    background-image: url("https://cdn.discordapp.com/attachments/472762389121466368/1031330502008905829/illustration-simple-background-anime-minimalism-red-grass-796391-wallhere.com.jpg");
+    background-size: 1800px;
+    background-repeat: no-repeat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    
+}
+
+h1 {
+    color:aqua;
+}
+h2 {
+    color:rgb(255, 148, 9);
+}
+input {
+    display:inline-block;
+
+}
+
+    </style>
     <h1>Edit Pokemon Page</h1>
     <form action="/pokemon/<%=id%>?_method=PUT" method="POST">
-        <input type="text" name="name" value="<%=allPokemon.name%>"placeholder="name"/>
-        <input type="text" name="img" value="<%=allPokemon.img%>"placeholder="image url link"/>
-        <input type="text" name="type" value="<%=allPokemon.type%>"placeholder="type"/>
-        <input type="text" name="hp" value="<%=allPokemon.stats.hp%>"placeholder="hp"/>
-        <input type="text" name="attack" value="<%=allPokemon.stats.attack%>"placeholder="attack"/>
-        <input type="text" name="defense" value="<%=allPokemon.stats.defense%>"placeholder="defense"/>
-        <input type="text" name="spattack" value="<%=allPokemon.stats.spattack%>"placeholder="spattack"/>
-        <input type="text" name="spdefense" value="<%=allPokemon.stats.spdefense%>"placeholder="spdefense"/>
-        <input type="text" name="speed" value="<%=allPokemon.stats.speed%>"placeholder="speed"/>
-        <input type="submit" value="submit edit"/>
+        <h2>Name:</h2><input type="text" name="name"      value="<%=allPokemon.name%>"           placeholder="name"/>
+        <h2>Image Url:</h2><input type="text" name="img"       value="<%=allPokemon.img%>"            placeholder="image url link"/>
+        <h2>Type:</h2><input type="text" name="type"      value="<%=allPokemon.type%>"           placeholder="type"/>
+        <h2>HP:</h2><input type="text" name="hp"        value="<%=allPokemon.stats.hp%>"       placeholder="hp"/>
+        <h2>Attack:</h2><input type="text" name="attack"    value="<%=allPokemon.stats.attack%>"   placeholder="attack"/>
+        <h2>Defense:</h2><input type="text" name="defense"   value="<%=allPokemon.stats.defense%>"  placeholder="defense"/>
+        <h2>SPAttack:</h2><input type="text" name="spattack"  value="<%=allPokemon.stats.spattack%>" placeholder="spattack"/>
+        <h2>SPDefense:</h2><input type="text" name="spdefense" value="<%=allPokemon.stats.spdefense%>"placeholder="spdefense"/>
+        <h2>Speed:</h2><input type="text" name="speed"     value="<%=allPokemon.stats.speed%>"    placeholder="speed"/>
+        <h2>Submit:</h2><input type="submit" value="submit your changes"/>
+        <h2>Return to the home page.</h2><button class = 'btn'><a href="/pokemon">Back to Pokédex Home</a></button>
     </form>
   </body>
 </html>

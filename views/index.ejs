@@ -13,10 +13,10 @@
         }
 
         img {
-             height: 100px;
-             width: 100px;
-              border: 1px solid;
-             border-radius: 1em;
+            height: 100px;
+            width: 100px;
+            border: 1px solid;
+            border-radius: 1em;
              
         }
         li {
@@ -39,21 +39,21 @@
 <body>
     
         <div class="flex-container">
-                 <div class="nav-bar">
-                     <ul >
-                         <h1>Pokédex</h1>
-                            <% for(let i =0; i < allPokemon.length; i++){ %>
+            <div class="nav-bar">
+                <ul >
+                    <h1>Pokédex</h1>
+                        <% for(let i =0; i < allPokemon.length; i++){ %>
                             <li>
                                     <a href="/pokemon/<%=i %>"> <img src=<%= allPokemon[i].img %>></a>
                                     <form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
                                         <input type="submit" value="DELETE" />
-                                        <a href="/pokemon/<%=i%>/edit">Edit</a>
+                                        <button><a href="/pokemon/<%=i%>/edit">EDIT</a></button>
                                       </form>
                             </li>
-                            <% } %>
-                            </ul>
-                    </div>
-                </div>
+                        <% } %>
+                </ul>
+            </div>
+        </div>
 </body>
 </html>
 
