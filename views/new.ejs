@@ -29,14 +29,14 @@
     <h1>Create a New Pokémon!</h1>
         <form action="/pokemon/" method="POST">
             <h2>Name:</h2>      <input type="text" name="name"      placeholder="name"/>
-            <h2>Image URL:</h2> <input type="text" name="img"       placeholder="image url link"/>
+            <h2>Image URL:</h2> <input type="url" name="img"       placeholder="image url link"/>
             <h2>Type:</h2>      <input type="text" name="type"      placeholder="type"/>
-            <h2>HP:</h2>        <input type="text" name="hp"        placeholder="hp"/>
-            <h2>Attack:</h2>    <input type="text" name="attack"    placeholder="attack"/>
-            <h2>Defense:</h2>   <input type="text" name="defense"   placeholder="defense"/>
-            <h2>SPAttack:</h2>  <input type="text" name="spattack"  placeholder="spattack"/>
-            <h2>SPDefense:</h2> <input type="text" name="spdefense" placeholder="spdefense"/>
-            <h2>Speed:</h2>     <input type="text" name="speed"     placeholder="speed"/>
+            <h2>HP:</h2>        <input type="number" name="hp"        placeholder="hp"/>
+            <h2>Attack:</h2>    <input type="nubmer" name="attack"    placeholder="attack"/>
+            <h2>Defense:</h2>   <input type="number" name="defense"   placeholder="defense"/>
+            <h2>SPAttack:</h2>  <input type="number" name="spattack"  placeholder="spattack"/>
+            <h2>SPDefense:</h2> <input type="number" name="spdefense" placeholder="spdefense"/>
+            <h2>Speed:</h2>     <input type="number" name="speed"     placeholder="speed"/>
 
             <h2>Submit your New Pokémon!</h2><input type="submit" name="" value="new Pokemon"/>
             <button class = 'btn'><a href="/pokemon">Back to Pokédex</a></button>

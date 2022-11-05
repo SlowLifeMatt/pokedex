@@ -31,20 +31,19 @@ app.get('/pokemon/:id', (req, res) => {
 // create
 app.post('/pokemon', (req,res) => {
     console.log(req.body)
-    
-    let stats = {
-        hp: req.body.hp,
-        attack: req.body.attack,
-        defense: req.body.defense,
-        spattack: req.body.spattack,
-        spdefense: req.body.spdefense,
-        speed: req.body.speed
-    }
+         //i probably would keep this all in one object
     let newPokemon = {
         name: req.body.name,
         img: req.body.img,
         type: req.body.type,
-        stats: stats,
+        stats: {
+            hp: req.body.hp,
+            attack: req.body.attack,
+            defense: req.body.defense,
+            spattack: req.body.spattack,
+            spdefense: req.body.spdefense,
+            speed: req.body.speed
+        },
 
     }
     pokemon.push(newPokemon)
@@ -70,24 +69,25 @@ app.get('/pokemon/:id/edit', (req, res) => {
   });
 
  // update
- app.put('/pokemon/:id', (req,res) => {
-    let stats = {
-        hp: req.body.hp,
-        attack: req.body.attack,
-        defense: req.body.defense,
-        spattack: req.body.spattack,
-        spdefense: req.body.spdefense,
-        speed: req.body.speed
-    }
+app.put('/pokemon/:id', (req, res) => {
+     //i probably would keep this all in one object
     let editPokemon = {
         name: req.body.name,
         img: req.body.img,
         type: req.body.type,
-        stats: stats,
+        stats: {
+            hp: req.body.hp,
+            attack: req.body.attack,
+            defense: req.body.defense,
+            spattack: req.body.spattack,
+            spdefense: req.body.spdefense,
+            speed: req.body.speed
+        },
 
     }
+    //i would redirect to the edited pokemon to show the user the changes right away
     pokemon[req.params.id] = editPokemon
-    res.redirect('/pokemon')
+    res.redirect(`/pokemon/${req.params.id}`)
  }) 
 
 // listener
